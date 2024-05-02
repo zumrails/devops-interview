@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="led" [ngClass]="{'green': ledColor === 'green', 'red': ledColor === 'red'}"></div>
+  <div class="content">
+    <p class="response">{{ apiResponse?.dateTime }}</p>
+    <p class="message">{{ message }}</p>
+  </div>
+</div>
