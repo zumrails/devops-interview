@@ -56,15 +56,15 @@ resource "aws_lb" "load_balancer" {
   internal           = true
   load_balancer_type = "application"
   subnets            = module.vpc.public_subnets
-  security_groups    = [module.vpc.default_security_group_id]
+  security_groups    = [aws_security_group.alb_sg.id]
 
   tags = {
-    Name = "example-lb"
+    Name = "interview-lb"
   }
 }
 
 # Create a default listener (HTTP on port 80)
-resource "aws_lb_listener" "example" {
+resource "aws_lb_listener" "lb_listener" {
   load_balancer_arn = aws_lb.load_balancer.arn
   port              = 80
   protocol          = "HTTP"
