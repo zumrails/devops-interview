@@ -14,4 +14,8 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/out ./
+
+#Indetifying ports to be exposed
+EXPOSE 80
+
 ENTRYPOINT ["dotnet", "Project.Api.dll"]

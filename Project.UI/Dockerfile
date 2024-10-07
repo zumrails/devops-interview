@@ -20,6 +20,9 @@ RUN echo $(envsubst < src/environments/environment.prod.ts) > src/environments/e
 # Build the Angular application
 RUN npm run build --prod
 
+#Indetifying ports to be exposed
+EXPOSE 80
+
 # Use the official Nginx image as a runtime stage
 FROM nginx:latest AS runtime
 COPY --from=build /app/dist/project.ui /usr/share/nginx/html
