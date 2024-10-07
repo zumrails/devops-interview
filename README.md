@@ -45,5 +45,6 @@
 
 ## Additional Notes:
 - Follow security best practices when setting up the security groups (e.g., only allowing necessary ports and IP ranges).
+- Consider that this deployment might be used at multiple environment scenarios.
 - Ensure the Terraform configuration is modular, reusable, and follows best practices.
 - Research is encouraged, but the use of AI is prohibited.
