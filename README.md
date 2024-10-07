@@ -3,9 +3,11 @@
 ## Requirements:
 - AWS CLI installed
 - AWS SSM plugin installed
+- Docker installed
 - GIT installed
 - Terraform Installed
 - RDP client installed
+- IDE of your choice
 
 ## Objectives:
 
@@ -13,6 +15,7 @@
 - Deploy a .NET Core API and angular UI to AWS EC2 instances, ensuring that applications are accessible through an URI hosted in the provided route53 through the internal Application Load Balancer (ALB) and that the UI is pointing to the API address. You will be provided with AWS credentials to complete this task.
 - the API must be available thorugh api.internal.interview.com
 - the UI must be available throygh ui.internal.interview.com
+- IMPORTANT! Since we want to see your understanding of AWS and Terraform, the use of external terraform modules is not allowed!
 
 ### 2
 - A Windows EC2 instance will be deployed in the AWS account, make sure the application deployed is accessible thorugh that instance 
